@@ -1,0 +1,7 @@
+<!-- <li *ngClass="{ 'completed': completed }"><button *ngIf="completed"></button> </li> -->
+<li [ngClass]="{
+    'completed': completed,
+    'not-completed': !completed
+  }">
+    <button *ngIf="!completed" class="done">Complete</button> {{task}} <button id="cancel">x</button>
+</li>

@@ -1,0 +1,27 @@
+
+<main>
+  <article>
+  <h1>TODO List</h1>
+  <h3>A place to store your todos</h3>
+  <input placeholder="Filter your to-dos">
+  
+  
+  
+  <div>
+
+    
+    <ol> 
+      <ng-template ngFor let-todo [ngForOf]="todos">
+        <todo [completed]="todo.completed" [task]="todo.task"></todo></ng-template>
+        
+       
+    </ol>
+</div>
+<input placeholder="Add your to-do"><br>
+
+<button>Add</button>
+
+  
+  </article>
+  </main>
+  

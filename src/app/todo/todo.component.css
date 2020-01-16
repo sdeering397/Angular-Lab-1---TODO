@@ -1,0 +1,12 @@
+.completed {
+    background-color: rgb(94, 173, 199);
+    text-decoration: line-through
+}
+
+.not-completed {
+    background-color: lightsalmon;
+}
+
+#cancel{
+    justify-content: end;
+}
