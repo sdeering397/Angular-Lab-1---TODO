@@ -3,5 +3,5 @@
     'completed': completed,
     'not-completed': !completed
   }">
-    <button *ngIf="!completed" class="done">Complete</button> {{task}} <button id="cancel">x</button>
+    <button (click)="complete()" *ngIf="!completed" class="done">Complete</button> {{task}} <button (click)="onDelete()" id="cancel">x</button>
 </li>

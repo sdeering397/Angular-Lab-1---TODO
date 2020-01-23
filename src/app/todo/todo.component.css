@@ -8,5 +8,9 @@
 }
 
 #cancel{
-    justify-content: end;
+    float: right;
+}
+
+li{
+    margin-bottom: 10px;
 }

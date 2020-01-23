@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, ɵisBoundToModule__POST_R3__ } from '@angular/core';
 import {ITodo} from './todo/todo.component';
+
  
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import {ITodo} from './todo/todo.component';
 })
 export class AppComponent{
   title = 'Todo-App';
-
+  filterText : string;
   todos: ITodo[]= [
     {
       completed: false,
@@ -36,5 +37,27 @@ export class AppComponent{
     },
     
   ];
+
+
+deleteItem(index) {
+  console.log(index)
+  this.todos.splice(index, 1);
+  this.todos = [...this.todos]
 }
+
+completeItem(index){
+  let task = this.todos[index];
+  task.completed = true;
+  this.todos = [...this.todos];
+
+}
+
+addTodo(tsk: string){
+  this.todos = [...this.todos, {task: tsk, completed: false}];
+}
+
+
+
+}
+
 
